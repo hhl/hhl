@@ -1,4 +1,4 @@
-I upload the script **sakis3g Version 0.2.0e** to github because www.sakis.org seems to be down.
+I upload the script **sakis3g Version 0.2.0e** to github because www.sakis3g.org seems to be down.
 
 Sorry that i took the bit outdated version, but i do not have a newer one.
 
