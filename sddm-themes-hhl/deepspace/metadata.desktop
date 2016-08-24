@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=patience
+Description=patience sddm theme, based on elarun SddmGreeterTheme.
+Type=sddm-theme
+Author=Hendrik Lehmbruch
+Copyright=2015, Hendrik Lehmbruch
+License=EXPAT
+Screenshot=images/preview.jpg
+Version=0.1
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=patience
+Theme-API=2.0
+Website=https://github.com/sddm/sddm
