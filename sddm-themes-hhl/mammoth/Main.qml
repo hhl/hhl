@@ -37,19 +37,28 @@ Rectangle {
 
          TextConstants { id: textConstants }
 
+    Item {
+        
+        /* Resets the "Login Failed" message after 3 seconds */
+        Timer {
+            id: errorMessageResetTimer
+            interval: 3000
+            onTriggered: errorMessage.text = ""
+            }
+            
         Connections {
             target: sddm
-        
             onLoginFailed: {
-                errorMessage.color = "white"
+                /* on fail login, clean user and password entry */
+                pw_entry.text = ""
+                user_entry.text = ""
+                user_entry.focus = true
+                /* Reset the message*/
+                errorMessageResetTimer.restart()
                 errorMessage.text = textConstants.loginFailed
-                errorMessage.background = "black"                        
-                listView.currentItem.password = ""
-                pw_entry.enabled = true
-                pw_entry.selectAll()
-                pw_entry.forceActiveFocus()
             }
         }
+    }
 
     Repeater {
         model: screenModel
@@ -147,9 +156,7 @@ Rectangle{
             Item {
                 anchors.margins: 20
                 anchors.fill: parent
-                            
-
-
+                
                 /* workaround to focus the user_entry, see below the TextBox user_entry */
             	property alias user: user_entry.text
 
