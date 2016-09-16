@@ -1,7 +1,7 @@
 /***************************************************************************
-+ Copyright (c) 2015 Hendrik Lehmbruch <hendrikL@siduction.org>
-* Copyright (c) 2013 Reza Fatahilah Shah <rshah0385@kireihana.com>
-* Copyright (c) 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
++ Copyright: 2015-2016 Hendrik Lehmbruch <hendrikL@siduction.org>
+*            2013 Reza Fatahilah Shah <rshah0385@kireihana.com>
+*            2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
 *
 * Permission is hereby granted, free of charge, to any person
 * obtaining a copy of this software and associated documentation
@@ -31,35 +31,32 @@ import "./components"
 Rectangle {
     width: 640
     height: 480
-
+    
     LayoutMirroring.enabled: Qt.locale().textDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
-
-         TextConstants { id: textConstants }
-
-    Item {
+    
+    TextConstants { id: textConstants }
         
-        /* Resets the "Login Failed" message after 3 seconds */
-        Timer {
-            id: errorMessageResetTimer
-            interval: 3000
-            onTriggered: errorMessage.text = ""
-            }
-            
-        Connections {
-            target: sddm
-            onLoginFailed: {
-                /* on fail login, clean user and password entry */
-                pw_entry.text = ""
-                user_entry.text = ""
-                user_entry.focus = true
-                /* Reset the message*/
-                errorMessageResetTimer.restart()
-                errorMessage.text = textConstants.loginFailed
-            }
+    /* Resets the "Login Failed" message after 3 seconds */
+    Timer {
+        id: errorMessageResetTimer
+        interval: 3000
+        onTriggered: errorMessage.text = ""
+    }
+    
+    Connections {
+        target: sddm
+        onLoginFailed: {
+            /* on fail login, clean user and password entry */
+            pw_entry.text = ""
+            user_entry.text = ""
+            user_entry.focus = true
+            /* Reset the message*/
+            errorMessageResetTimer.restart()
+            errorMessage.text = textConstants.loginFailed
         }
     }
-
+    
     Repeater {
         model: screenModel
         Background {
@@ -76,9 +73,9 @@ Rectangle {
             }
         }
     }
-
-/*top bar*/
-
+    
+    /*top bar*/
+    
     Rectangle {
         width: parent.width; height: 34
         color: "#053343"
@@ -89,81 +86,81 @@ Rectangle {
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
     }
-
-/*end top bar*/
-  
-Rectangle{
-    anchors.centerIn: parent
-    width: 612; height:378
-    color: "transparent"
     
-    Rectangle {
-        property variant geometry: screenModel.geometry(screenModel.primary)
-        x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
+    /*end top bar*/
+    
+    Rectangle{
+        anchors.centerIn: parent
+        width: 612; height:378
         color: "transparent"
         
         Rectangle {
-
-            width: 612; height: 346
-            color: "#00000000"
+            property variant geometry: screenModel.geometry(screenModel.primary)
+            x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
+            color: "transparent"
             
-            /* Messages and warnings */
-           Column {
+            Rectangle {
                 
-                anchors.centerIn: parent
+                width: 612; height: 346
+                color: "#00000000"
                 
-                /* Capslock warning */                
-                Rectangle {
+                /* Messages and warnings */
+                Column {
                     
                     anchors.centerIn: parent
+                    
+                    /* Capslock warning */                
+                    Rectangle {
                         
-                    CapsLock {
-                        id: txtCaps
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.top: parent.top
-                        anchors.topMargin: -265
-                        color:"white"
-                        font.pixelSize: 14
+                        anchors.centerIn: parent
+                        
+                        CapsLock {
+                            id: txtCaps
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.top: parent.top
+                            anchors.topMargin: -265
+                            color:"white"
+                            font.pixelSize: 14
                         }
                     }
                     
-                /* Login faild message */
+                    /* Login faild message */
+                    
+                    Rectangle {
                         
-                Rectangle {
-
-                    anchors.centerIn: parent
-                    anchors.fill: parent
-                    anchors.top: parent.top
-                    anchors.topMargin: -300
-                                
-                    Text {
-                        id: errorMessage
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        color:"white"
-                        font.pixelSize: 14
+                        anchors.centerIn: parent
+                        anchors.fill: parent
+                        anchors.top: parent.top
+                        anchors.topMargin: -300
                         
-                        /***********************************
-                         * if you want to be prompted      *
-                         * to insert username and password,*
-                         * than remove the comment below   *
-                         * ********************************/
-                        //text: textConstants.prompt
+                        Text {
+                            id: errorMessage
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            color:"white"
+                            font.pixelSize: 14
+                            
+                            /***********************************
+                             * if you want to be prompted      *
+                             * to insert username and password,*
+                             * than remove the comment below   *
+                             * ********************************/
+                            //text: textConstants.prompt
                         }
                     }
                 }
-            /* End Messages and warnings */
+                /* End Messages and warnings */
                 
-            Item {
-                anchors.margins: 20
-                anchors.fill: parent
-                
-                /* workaround to focus the user_entry, see below the TextBox user_entry */
-            	property alias user: user_entry.text
-
-            	/* workaround to focus pw_entry if needed */
-                property alias password: pw_entry.text
-
-                Column {
+                Item {
+                    anchors.margins: 20
+                    anchors.fill: parent
+                    
+                    /* workaround to focus the user_entry, see below the TextBox user_entry */
+                    property alias user: user_entry.text
+                    
+                    /* workaround to focus pw_entry if needed */
+                    property alias password: pw_entry.text
+                    
+                    Column {
                         anchors.left: parent.left
                         anchors.leftMargin: 5
                         anchors.bottom: parent.bottom
@@ -173,14 +170,14 @@ Rectangle{
                         
                         Row {
                             id:labelRow
-
+                            
                             spacing: 12
-                                            
+                            
                             Rectangle {
                                 anchors.bottom: parent.bottom
                                 width: 250; height: 21
                                 color: "transparent" 
-                            
+                                
                                 Text {
                                     id:userName
                                     color:"white"
@@ -202,24 +199,25 @@ Rectangle{
                                 }
                             }    
                         }                    
-
+                        
                         Row {
                             id: userRow
                             anchors.right: parent.right
-
+                            
                             spacing: 12
-
+                            
                             TextBox {
                                 id: user_entry
                                 
-                               
-
+                                
+                                /* I THINK THERE IS NO NEED FOR THAT HACK ANY MORE; BUT I LEAVE IT AS IT IS */
+                                
                                 /*** hack found in plasma breeze sddm as workaround to focus input field ***/
                                 /***************************************************************************** 
-                                * focus works in qmlscene
-                                * but this seems to be needed when loaded from SDDM
-                                * I don't understand why, but we have seen this before in the old lock screen
-                                ******************************************************************************/ 
+                                 * focus works in qmlscene
+                                 * but this seems to be needed when loaded from SDDM
+                                 * I don't understand why, but we have seen this before in the old lock screen
+                                 ******************************************************************************/ 
                                 
                                 /* start hack */
                                 
@@ -233,56 +231,56 @@ Rectangle{
                                 /* end hack */
                                 
                                 width: 250; height: 30
-
+                                
                                 /***********************************************************************
-                                * If you want the last successfully logged in user to be displayed,
-                                * uncomment the "text: userModel.lastUser" row below
-                                * for more informations why it isn't possible to configure it via
-                                * /etc/sddm.conf see https://bugzilla.redhat.com/show_bug.cgi?id=1238889
-                                * so i wait, till this is fixed in debian sid.
-                                * Dont forget to enable it in the /etc/sddm.conf
-                                * "RememberLastUser=true",
-                                * also take a look to the pw_entry section below!
-                                ************************************************************************/
-                               
+                                 * If you want the last successfully logged in user to be displayed,
+                                 * uncomment the "text: userModel.lastUser" row below
+                                 * for more informations why it isn't possible to configure it via
+                                 * /etc/sddm.conf see https://bugzilla.redhat.com/show_bug.cgi?id=1238889
+                                 * so i wait, till this is fixed in debian sid.
+                                 * Dont forget to enable it in the /etc/sddm.conf
+                                 * "RememberLastUser=true",
+                                 * also take a look to the pw_entry section below!
+                                 ************************************************************************/
+                                
                                 //text: userModel.lastUser
-
+                                
                                 font.pixelSize: 14
                                 radius: 3
                                 focus: true
-
+                                
                                 KeyNavigation.backtab: user_entry; KeyNavigation.tab: pw_entry
                             }
-
+                            
                             PwBox {
                                 id: pw_entry
                                 
-                                    /***************************************************************
-                                    * if you uncomment the "text: userModel.lastUser" row above,
-                                    * uncomment the Timer section below too,
-                                    * But also comment the Timer section above, so that the
-                                    * password box is focused and not the user box.
-                                    * **************************************************************/
-                                    
-                                    /* start hack */
-                                    
-                                    Timer {
-                                    	interval: 200
-                                    	running: true
-                                    	repeat: false
-                                    	onTriggered: pw_entry.forceActiveFocus()
-                                    }
-                                    
-                                    /* end hack */
-                                    
+                                /***************************************************************
+                                 * if you uncomment the "text: userModel.lastUser" row above,
+                                 * uncomment the Timer section below too,
+                                 * But also comment the Timer section above, so that the
+                                 * password box is focused and not the user box.
+                                 * **************************************************************/
+                                
+                                /* start hack */
+                                
+                                Timer {
+                                    interval: 200
+                                    running: true
+                                    repeat: false
+                                    onTriggered: pw_entry.forceActiveFocus()
+                                }
+                                
+                                /* end hack */
+                                
                                 width: 250; height: 30
-
+                                
                                 font.pixelSize: 14
                                 radius: 3
                                 focus: true
-
+                                
                                 KeyNavigation.backtab: user_entry; KeyNavigation.tab: login_button
-
+                                
                                 Keys.onPressed: {
                                     if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                                         sddm.login(user_entry.text, pw_entry.text, menu_session.index)
@@ -291,144 +289,145 @@ Rectangle{
                                 }
                                 
                             }
-                         
-                            }
+                            
                         }
-
+                    }
+                    
                     Item {
                         
                         width: 612; height: 36 
                         anchors.bottom: parent.bottom
                         anchors.left: parent.left; anchors.right: parent.right
-                        anchors.leftMargin:12
+                        anchors.leftMargin: 12
                         anchors.bottomMargin: -40
                         
                         /* tooltips buttonRow */
                         ToolTip {
                             id: tooltip3
-                                target: session_button
-                                text: textConstants.session
-                                }
-                                
+                            target: session_button
+                            text: textConstants.session
+                        }
+                        
                         ToolTip {
                             id: tooltip4
-                                target: system_button
-                                text: textConstants.shutdown
-                                }
-                                
+                            target: system_button
+                            text: textConstants.shutdown
+                        }
+                        
                         ToolTip {
                             id: tooltip5
-                                target: reboot_button
-                                text: textConstants.reboot
-                                }
-                                
+                            target: reboot_button
+                            text: textConstants.reboot
+                        }
+                        
                         /* there is no translation in sddm for it */
                         ToolTip {
                             id: tooltip6
-                                target: suspend_button
-                                text: "Suspend" // textConstants.suspend
-                                }
-                                
+                            target: suspend_button
+                            text: "Suspend" // textConstants.suspend
+                        }
+                        
                         /* there is no translation in sddm for it */        
                         ToolTip {
                             id: tooltip7
-                                target: hibernate_button
-                                text: "Hibernate" //textConstants.hibernate
-                                }
-                                
-                        ToolTip {
-                                id: tooltip2
-                                target: login_button
-                                text: textConstants.login
-                                }
-                                
-                    Row {
+                            target: hibernate_button
+                            text: "Hibernate" //textConstants.hibernate
+                        }
                         
-                        spacing: 15
-                            
-                        Rectangle {
-                            
-                            width: 612; height: 32
-                            color: "transparent"
-                            anchors.topMargin:10
-                            anchors.top: parent.top
+                        ToolTip {
+                            id: tooltip2
+                            target: login_button
+                            text: textConstants.login
+                        }
                         
                         Row {
                             
-                            id: buttonRow
-                            height: 36
-                            anchors.topMargin:10
-
-                            spacing: 8
-                                                    
-                            ImageButton {
-                                id: session_button
-                                height: 32
-                                source: "images/siductionlogin-white.png" //"images/session_normal.png"
-                                onClicked: if (menu_session.state === "visible") menu_session.state = ""; else 
-menu_session.state = "visible"
-
-                                KeyNavigation.backtab: login_button; KeyNavigation.tab: system_button
-
-                            }
-
-                            ImageButton {
-                                id: system_button
-                                height: 32
-                                source: "images/system_shutdown.png"
-                                onClicked: sddm.powerOff()
-
-                                KeyNavigation.backtab: session_button; KeyNavigation.tab: reboot_button
-                            }
-
-                            ImageButton {
-                                id: reboot_button
-                                height: 32
-                                source: "images/system_reboot.png"
-                                onClicked: sddm.reboot()
-
-                                KeyNavigation.backtab: system_button; KeyNavigation.tab: suspend_button
-                            }
-
-                            ImageButton {
-                                id: suspend_button
-                                height: 32
-                                source: "images/system_suspend.png"
-                                visible: sddm.canSuspend
-                                onClicked: sddm.suspend()
-
-                                KeyNavigation.backtab: reboot_button; KeyNavigation.tab: hibernate_button
-                            }
-
-                            ImageButton {
-                                id: hibernate_button
-                                height: 32
-                                source: "images/system_hibernate.png"
-                                visible: sddm.canHibernate
-                                onClicked: sddm.hibernate()
-
-                                KeyNavigation.backtab: suspend_button; KeyNavigation.tab: user_entry
-                            }
+                            spacing: 15
                             
-                            ImageButton {
-                                id: login_button
-                                height: 32
-                                source: "images/login_normal.png"                                                    
-            
-                                onClicked: sddm.login(user_entry.text, pw_entry.text, menu_session.index)
-            
-                                KeyNavigation.backtab: pw_entry; KeyNavigation.tab: session_button
-                            }
-                        }
-                        
-                            SessionMenu {
+                            Rectangle {
                                 
-                                id: menu_session
-                                width: 200; height: 0
-                                anchors.top: buttonRow.bottom; anchors.left: buttonRow.left
-
-                                model: sessionModel
-                                index: sessionModel.lastIndex                    
+                                width: 612; height: 32
+                                color: "transparent"
+                                anchors.topMargin:10
+                                anchors.top: parent.top
+                                
+                                Row {
+                                    
+                                    id: buttonRow
+                                    height: 36
+                                    anchors.topMargin:10
+                                    
+                                    spacing: 8
+                                    
+                                    ImageButton {
+                                        id: session_button
+                                        height: 32
+                                        source: "images/siductionlogin-white.png" //"images/session_normal.png"
+                                        onClicked: if (menu_session.state === "visible") menu_session.state = ""; else 
+                                        menu_session.state = "visible"
+                                        
+                                        KeyNavigation.backtab: login_button; KeyNavigation.tab: system_button
+                                        
+                                    }
+                                    
+                                    ImageButton {
+                                        id: system_button
+                                        height: 32
+                                        source: "images/system_shutdown.png"
+                                        onClicked: sddm.powerOff()
+                                        
+                                        KeyNavigation.backtab: session_button; KeyNavigation.tab: reboot_button
+                                    }
+                                    
+                                    ImageButton {
+                                        id: reboot_button
+                                        height: 32
+                                        source: "images/system_reboot.png"
+                                        onClicked: sddm.reboot()
+                                        
+                                        KeyNavigation.backtab: system_button; KeyNavigation.tab: suspend_button
+                                    }
+                                    
+                                    ImageButton {
+                                        id: suspend_button
+                                        height: 32
+                                        source: "images/system_suspend.png"
+                                        visible: sddm.canSuspend
+                                        onClicked: sddm.suspend()
+                                        
+                                        KeyNavigation.backtab: reboot_button; KeyNavigation.tab: hibernate_button
+                                    }
+                                    
+                                    ImageButton {
+                                        id: hibernate_button
+                                        height: 32
+                                        source: "images/system_hibernate.png"
+                                        visible: sddm.canHibernate
+                                        onClicked: sddm.hibernate()
+                                        
+                                        KeyNavigation.backtab: suspend_button; KeyNavigation.tab: user_entry
+                                    }
+                                    
+                                    ImageButton {
+                                        id: login_button
+                                        height: 32
+                                        source: "images/login_normal.png"                                                    
+                                        
+                                        onClicked: sddm.login(user_entry.text, pw_entry.text, menu_session.index)
+                                        
+                                        KeyNavigation.backtab: pw_entry; KeyNavigation.tab: session_button
+                                    }
+                                }
+                                
+                                SessionMenu {
+                                    
+                                    id: menu_session
+                                    width: 200; height: 0
+                                    anchors.top: buttonRow.bottom; anchors.left: buttonRow.left
+                                    
+                                    model: sessionModel
+                                    index: sessionModel.lastIndex                    
+                                }
                             }
                         }
                     }
@@ -436,52 +435,45 @@ menu_session.state = "visible"
             }
         }
     }
-}
-         
-        Rectangle {
-            id: infoHost
-            anchors.left: parent.left; anchors.top: parent.top
-            anchors.topMargin:10
-                                
-            Text {
-                id:hostName
-                anchors.left: parent.left
-                anchors.leftMargin:20
-                anchors.topMargin:15
-                color:"white"                    
-                    
-                /*******************************************************************
-                * Now, only the hostName is displayed.
-                * "Welcome to" is not displayed
-                * i decided that it looks nicer like it is, without the "welcome to"
-                * Feel free to change it 
-                *******************************************************************/
-                    
-                text:textConstants.welcomeText.arg(sddm.hostName)//ssdm.hostName 
-                font.pixelSize: 12
-            }
-        }        
+    
+    Text {
+        id:hostName
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.leftMargin: 20
+        anchors.topMargin: 10
+        color:"white"
         
-        Rectangle {
-            id: infoDate
-            anchors.right: parent.right; anchors.top: parent.top
-            anchors.topMargin:10
-
-            TimeDate { 
-                        id: clock
-                        anchors.right: parent.right
-                        anchors.rightMargin:20
-                        color: "white"
-            }
-
+        text:textConstants.welcomeText.arg (sddm.hostName)
+        font.pixelSize: 12
+    }
+    
+    Timer {
+        id: time
+        interval: 100
+        running: true
+        repeat: true
+        
+        onTriggered: {
+            dateTime.text = Qt.formatDateTime(new Date(), Locale.LongFormat)
         }
-
-        Component.onCompleted: {
-            if (user_entry.text === "")
-                user_entry.focus = true
+    }
+    
+    Text { 
+        id:dateTime
+        anchors.top: parent.top
+        anchors.right: parent.right
+        anchors.rightMargin: 20
+        anchors.topMargin: 10
+        color: "white"
+    }
+    
+    Component.onCompleted: {
+        if (user_entry.text === "")
+            user_entry.focus = true
             else
                 pw_entry.focus = true
-        }
-
     }
-                                                                                
+    
+}
+

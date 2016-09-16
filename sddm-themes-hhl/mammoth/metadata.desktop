@@ -1,7 +1,6 @@
 [SddmGreeterTheme]
 Name=mammoth
-
-Description=strange thing, hills, sun, clouds, green, blue
+Description=strange thing
 Type=sddm-theme
 Author=Hendrik Lehmbruch
 Copyright=(c) 2015, Hendrik Lehmbruch
