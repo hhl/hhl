@@ -34,7 +34,7 @@ Rectangle {
     property int itemHeight: 30
     property alias model: menuList.model
     property alias index: menuList.currentIndex
-
+    
     Behavior on height { NumberAnimation { duration: 100 } }
 
     states: [
@@ -58,7 +58,8 @@ Rectangle {
 
                 text: model.name
                 elide: Text.ElideRight
-
+                color: mouseArea.containsMouse ? "white" : "black"
+                
                 verticalAlignment: Text.AlignVCenter
             }
 
@@ -75,18 +76,17 @@ Rectangle {
             Keys.onReturnPressed: { itemClicked(index); menu.state = "" }
         }
     }
-    
 
-
-        ListView {
-            id: menuList
-                
-            anchors.fill: parent                
-            clip: true
-            delegate: listViewItem
-            highlight: Rectangle { color: "#FF4500"
-            radius: 3 /*"lightsteelblue"*/ }
+    ListView {
+        id: menuList
+            
+        anchors.fill: parent                
+        clip: true
+        delegate: listViewItem
+        highlight: Rectangle { 
+        color: "#FF4500"
+        radius: 3
         }
-        
+    }
 }
 

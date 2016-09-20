@@ -36,11 +36,11 @@ Rectangle {
     LayoutMirroring.childrenInherit: true
     
     TextConstants { id: textConstants }
-        
-    /* Resets the "Login Failed" message after 3 seconds */
+    
+    /* Resets the "Login Failed" message after 2½ seconds */
     Timer {
         id: errorMessageResetTimer
-        interval: 3000
+        interval: 2500
         onTriggered: errorMessage.text = ""
     }
     
@@ -80,9 +80,9 @@ Rectangle {
         width: parent.width; height: 34
         color: "#053343"
         //border.color: "white"
-        border.width: 0.5
-        opacity: 0.8 
-        radius: 3
+        //border.width: 0.5
+        opacity: 0.9 
+        //radius: 3
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
     }
@@ -104,48 +104,29 @@ Rectangle {
                 width: 612; height: 346
                 color: "#00000000"
                 
-                /* Messages and warnings */
-                Column {
+                /* Messages and warnings */ 
+                Item {
                     
                     anchors.centerIn: parent
                     
-                    /* Capslock warning */                
-                    Rectangle {
-                        
-                        anchors.centerIn: parent
-                        
-                        CapsLock {
-                            id: txtCaps
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.top: parent.top
-                            anchors.topMargin: -265
-                            color:"white"
-                            font.pixelSize: 14
-                        }
+                    CapsLock {
+                        id: txtCaps
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.top: parent.top
+                        anchors.topMargin: -265
+                        color:"white"
+                        font.pixelSize: 14
                     }
                     
                     /* Login faild message */
-                    
-                    Rectangle {
-                        
-                        anchors.centerIn: parent
-                        anchors.fill: parent
+                    Text {
+                        id: errorMessage
+                        anchors.horizontalCenter: parent.horizontalCenter
                         anchors.top: parent.top
                         anchors.topMargin: -300
                         
-                        Text {
-                            id: errorMessage
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            color:"white"
-                            font.pixelSize: 14
-                            
-                            /***********************************
-                             * if you want to be prompted      *
-                             * to insert username and password,*
-                             * than remove the comment below   *
-                             * ********************************/
-                            //text: textConstants.prompt
-                        }
+                        color:"white"
+                        font.pixelSize: 14
                     }
                 }
                 /* End Messages and warnings */
@@ -362,7 +343,7 @@ Rectangle {
                                     ImageButton {
                                         id: session_button
                                         height: 32
-                                        source: "images/siductionlogin-white.png" //"images/session_normal.png"
+                                        source: "images/siductionlogin-white.png"
                                         onClicked: if (menu_session.state === "visible") menu_session.state = ""; else 
                                         menu_session.state = "visible"
                                         
@@ -444,7 +425,7 @@ Rectangle {
         anchors.topMargin: 10
         color:"white"
         
-        text:textConstants.welcomeText.arg (sddm.hostName)
+        text:textConstants.welcomeText.arg (system(hostname -f))//(QSysInfo(machineHostName()))//(sddm.hostName)
         font.pixelSize: 12
     }
     
@@ -471,8 +452,8 @@ Rectangle {
     Component.onCompleted: {
         if (user_entry.text === "")
             user_entry.focus = true
-            else
-                pw_entry.focus = true
+        else
+            pw_entry.focus = true
     }
     
 }
