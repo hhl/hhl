@@ -113,7 +113,7 @@ Rectangle {
                         id: txtCaps
                         anchors.horizontalCenter: parent.horizontalCenter
                         anchors.top: parent.top
-                        anchors.topMargin: -265
+                        anchors.topMargin: 90 /*-265*/
                         color:"white"
                         font.pixelSize: 14
                     }
@@ -123,7 +123,7 @@ Rectangle {
                         id: errorMessage
                         anchors.horizontalCenter: parent.horizontalCenter
                         anchors.top: parent.top
-                        anchors.topMargin: -300
+                        anchors.topMargin: 74 /*-300*/
                         
                         color:"white"
                         font.pixelSize: 14
@@ -425,7 +425,7 @@ Rectangle {
         anchors.topMargin: 10
         color:"white"
         
-        text:textConstants.welcomeText.arg (system(hostname -f))//(QSysInfo(machineHostName()))//(sddm.hostName)
+        text:textConstants.welcomeText.arg (sddm.hostName)
         font.pixelSize: 12
     }
     
