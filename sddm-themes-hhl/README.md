@@ -2,8 +2,7 @@ Hi, here you will find my thoughts about sddm.
 
 _This is my playground, be aware of this!_
 
-That are examples for my personal use and test.
-
+That are examples for my personal use and test.  
 I share them, but you have to keep in mind, that software could eat your pet!
 
 __To use it, you do it on your own risk!__
@@ -19,7 +18,9 @@ __To use it, you do it on your own risk!__
 
  - _The themes for siduction have other release names!_
 
-- mammoth has just another background and i play more with the technik, so it is better to use deepspace.
+- mammoth has just another background and i play more with the technik,  
+  so it is better to use deepspace.
+- So work with deepspace:
  - You can change the background by your own. Take a look to theme.conf!
  - If you choose to use a light background search for
  
@@ -42,7 +43,11 @@ __To use it, you do it on your own risk!__
     }
     /* end background Main block */
 ```
- - remember, the mainBlock is centered!
+ - remember, the mainBlock is centered! (theme deepspace) 
+    - in mammoth the block is a bit deeper because of the pictures
+    - remember mammoth is my playground, it is hard to modify, because of my spagetti-code there.  
+      But it works!
+ 
 
 - no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field  
  - You want last succesfull logged in $user displayed? read the sources!
