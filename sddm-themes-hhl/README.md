@@ -1,4 +1,4 @@
-Hi here you will find my thoughts about sddm
+Hi, here you will find my thoughts about sddm.
 
 _This is my playground, be aware of this!_
 
@@ -17,7 +17,7 @@ Now some Words to the themes:
  But for technical reasons, we had to change some things there, only the repository is named to deepspace, because of historical reasons.
  [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github").
 
- The themes for siduction have other release names!
+ _The themes for siduction have other release names!_
 
 - mammoth has just another background and i play more with the technik, so it is better to use deepspace, 
   you can change the background by your own!
