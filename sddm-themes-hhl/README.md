@@ -20,7 +20,8 @@ __To use it, you do it on your own risk!__
  - _The themes for siduction have other release names!_
 
 - mammoth has just another background and i play more with the technik,  
-  the better choise is to use openspace.
+  - the better choise is to use openspace!
+
 - ##### Work with openspace:
  - You can change the background by your own. Take a look to theme.conf!
  - If you choose to use a light background search for
@@ -48,11 +49,10 @@ __To use it, you do it on your own risk!__
     - in mammoth the block is a bit deeper because of the pictures
     - remember, mammoth is my playground, it is hard to modify, because of my spagetti-code there.  
       But it works!
- 
-
-- no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field  
- - You want last succesfull logged in $user displayed? read the sources!
- - $user-pictures? no chance!
+      
+ - no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field  
+    - You want last succesfull logged in $user displayed? read the sources!
+    - $user-pictures? no chance!
  
 - all this fancy stuff is disabled!
 
