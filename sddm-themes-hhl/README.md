@@ -23,7 +23,7 @@ Now some Words to the themes:
   you can change the background by your own!
 - Take a look to the sources!
 
-- no $user pics are displayed and no $user-name is automaticly displayed in the userName field
+- no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field
   
   You want it? read the sources!
   
@@ -42,7 +42,9 @@ How to install?
 
  Just copy the theme folder to /usr/share/sddm/themes/
  
-How it look like?
+---
+ 
+How it looks like?
 
 ![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg)
 _deepspace_
@@ -50,6 +52,8 @@ _deepspace_
 
 ![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/mammoth/images/preview.jpg)
 _mammoth_
+
+---
 
 
  
