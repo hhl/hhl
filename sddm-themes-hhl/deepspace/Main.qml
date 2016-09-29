@@ -25,6 +25,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import QtGraphicalEffects 1.0
 import SddmComponents 2.0
 import "./components"
 
@@ -77,43 +78,45 @@ Rectangle {
             }
         }
     }
-    
-    /*top bar*/    
+
+    /* topBar */    
     Rectangle {
+        id: topBar
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width -24
         height: 34
-        color: "black"//"#053343"
+        color: "black" //"#053343"
         radius: 9
         opacity: 0.25 
     }    
-    /*end top bar*/
-    
+    /* end topBar */
+
     /* background Main block */    
     /************************************************** 
      * deepspace is made for dark backgrounds
-     * if you have light ones, choose a backgroundcolor
+     * if you have light ones, choose a background color
      * at the moment it is "transparent"
-     * also take a look to the topBar
+     * also take a look to the topBar above
      **************************************************/ 
     Rectangle {
+        id: mainBlock
         anchors.centerIn: parent
         width: 534
         height: 150
-        color:  "#00000000" //"black" //"#053343"
+        color:  "transparent" //"black" //"#053343"
         opacity: 0.25
         radius: 9
     }
     /* end background Main block */  
-    
+
     /* Main block */
     Rectangle {
         anchors.centerIn: parent
         width: 534
         height: 150
         color: "#00000000"
-        
+
         /* Messages and warnings */             
         CapsLock {
             id: txtCaps
@@ -123,7 +126,7 @@ Rectangle {
             color:"white"
             font.pixelSize: 14
         }
-        
+
         /* Login faild message */
         Text {
             id: errorMessage
@@ -134,7 +137,7 @@ Rectangle {
             font.pixelSize: 14
         }
         /* End Messages and warnings */
-        
+
         /* Login block */
         Rectangle {
             anchors.left: parent.left
@@ -144,7 +147,7 @@ Rectangle {
 
             /* workaround to focus the user_entry, see below the TextBox user_entry */
             property alias user: user_entry.text
-            
+
             /* workaround to focus pw_entry if needed */
             property alias password: pw_entry.text
 
@@ -191,7 +194,7 @@ Rectangle {
                     TextBox {
                         id: user_entry
 
-                        /* I THINK THERE IS NO NEED FOR THAT HACK ANY MORE; BUT I LEAVE IT AS IT IS */
+                        /* I THINK THERE IS NO NEED FOR THAT HACK ANY MORE, BUT I LEAVE IT AS IT IS */
 
                         /*** hack found in plasma breeze sddm as workaround to focus input field ***/
                         /***************************************************************************** 
@@ -336,7 +339,13 @@ Rectangle {
                 }
                 /* end buttonRow */
 
-                /* drop down session button */
+                /* ************************************************
+                 * drop down menu session button 
+                 * comment it out, if you don't wont it 
+                 * don't forget the session_button above 
+                 * also the KeyNavigation of the next button is a
+                 * thought worth than, ... okay?
+                 * ************************************************/
                 SessionMenu {                    
                     id: menu_session
                     width: 200; height: 0

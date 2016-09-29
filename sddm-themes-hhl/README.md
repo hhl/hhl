@@ -19,8 +19,18 @@ Now some Words to the themes:
 
  The themes for siduction have other release names!
 
-- mammoth has just another background i play with!
+- mammoth has just another background and i play more with the technik, so it is better to use deepspace, you can change the background by your own!
+- Take a look to the sources!
 
- (I am planing to create, a grub2 theme and a kf5/kde-splash screen with that mammoth thing. (okay i am working on, but it need time to grow))
+---
+
+What is needed:
+- sddm
+- QtQuick 2.0 (normaly it should be automagicly installed together with sddm)
+- QtGraphicalEffects 1.0 (qml-module-qtgraphicaleffects)
+
+How to install?
+
+Just copy the theme folder too /usr/share/sddm/themes/
  
 _I try to keep them up to date, but i cant give any guarantee that it will be just in time!_
