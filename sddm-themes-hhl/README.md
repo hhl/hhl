@@ -47,10 +47,12 @@ How to install?
 How it looks like?
 
 ![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg)
+
 _deepspace_
 
 
 ![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/mammoth/images/preview.jpg)
+
 _mammoth_
 
 ---
