@@ -10,53 +10,81 @@ __To use it, you do it on your own risk!__
 
 ---
 
-Now some Words to the themes:
+#### Now some Words to the themes:
 
 - deepspace is originally made for [siduction](https://siduction.org "siduction homepage")
 
  But for technical reasons, we had to change some things there, only the repository is named to deepspace, because of historical reasons.
  [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github").
 
- _The themes for siduction have other release names!_
+ - _The themes for siduction have other release names!_
 
-- mammoth has just another background and i play more with the technik, so it is better to use deepspace, 
-  you can change the background by your own!
-- Take a look to the sources!
+- mammoth has just another background and i play more with the technik, so it is better to use deepspace.
+ - You can change the background by your own. Take a look to theme.conf!
+ - If you choose to use a light background search for
+ 
+ ```qml
+   /* background Main block */    
+    /************************************************** 
+     * deepspace is made for dark backgrounds
+     * if you have light ones, choose a background color
+     * at the moment it is "transparent"
+     * also take a look to the topBar above
+     **************************************************/ 
+    Rectangle {
+        id: mainBlock
+        anchors.centerIn: parent
+        width: 534
+        height: 150
+        color:  "transparent" //"black" //"#053343"
+        opacity: 0.25
+        radius: 9
+    }
+    /* end background Main block */
+```
+ - remember, the mainBlock is centered!
 
-- no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field
-  
-  You want it? read the sources!
-  
-  $user-pictures? no chance!
-  
+- no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field  
+ - You want last succesfull logged in $user displayed? read the sources!
+ - $user-pictures? no chance!
+ 
 - all this fancy stuff is disabled!
 
 ---
 
-What is needed:
-- sddm
+#### What is needed:
+- [sddm](https://github.com/sddm/sddm "sddm")
 - QtQuick 2.0 (normaly it should be automagicly installed together with sddm)
 - QtGraphicalEffects 1.0 (qml-module-qtgraphicaleffects)
 
-How to install?
+---
+
+#### How to install?
 
  Just copy the theme folder to /usr/share/sddm/themes/
  
+ Don't forget to edit in etc/sddm.conf
+
+ ```
+ [Theme]
+ # Current theme name
+ Current=<your choise>
+```
+In kf5/plasma you can use the sddm-kcm module ( kde-config-sddm) to choose via systemsettings the sddm-theme of your wishes.
+ 
 ---
  
-How it looks like?
+#### How it looks like?
 
-![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg)
+![alt deepspace-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg "sddm-theme-deepspace preview")
 
 _deepspace_
 
 
-![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/mammoth/images/preview.jpg)
+![sample mammoth-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/mammoth/images/preview.jpg "sddm-theme-mammoth preview")
 
 _mammoth_
 
 ---
-
-
  
 _I try to keep them up to date, but i can't give any guarantee that it will be just in time!_
