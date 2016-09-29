@@ -31,6 +31,6 @@ What is needed:
 
 How to install?
 
-Just copy the theme folder too /usr/share/sddm/themes/
+Just copy the theme folder to /usr/share/sddm/themes/
  
 _I try to keep them up to date, but i cant give any guarantee that it will be just in time!_
