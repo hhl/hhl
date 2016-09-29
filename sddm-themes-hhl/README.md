@@ -24,9 +24,12 @@ Now some Words to the themes:
 - Take a look to the sources!
 
 - no $user pics are displayed and no $user-name is automaticly displayed in the userName field
-  if you want it? read the sources!
+  
+  You want it? read the sources!
+  
   $user-pictures? no chance!
-  all this fancy stuff is disabled!
+  
+- all this fancy stuff is disabled!
 
 ---
 
@@ -42,6 +45,11 @@ How to install?
 How it look like?
 
 ![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg)
+_deepspace_
+
+
+![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/mammoth/images/preview.jpg)
+_mammoth_
 
 
  
