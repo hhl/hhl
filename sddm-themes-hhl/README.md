@@ -19,8 +19,8 @@ __To use it, you do it on your own risk!__
  - _The themes for siduction have other release names!_
 
 - mammoth has just another background and i play more with the technik,  
-  so it is better to use deepspace.
-- So work with deepspace:
+  the better choise is to use deepspace.
+- Work with deepspace:
  - You can change the background by your own. Take a look to theme.conf!
  - If you choose to use a light background search for
  
@@ -54,6 +54,11 @@ __To use it, you do it on your own risk!__
  - $user-pictures? no chance!
  
 - all this fancy stuff is disabled!
+- if nothing helps, fetch 
+[sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github")
+and modify it to your needs.  
+Or in debian (sid/unstable) search for "sddm siduction" (`apt search sddm siduction`).  
+I told you, it is nearly the same, no fancy stuff and so on.
 
 ---
 
