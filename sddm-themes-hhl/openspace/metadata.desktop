@@ -1,6 +1,6 @@
 [SddmGreeterTheme]
-Name=deepspace
-Description=deepspace sddm theme.
+Name=openspace
+Description=openspace sddm theme.
 Type=sddm-theme
 Author=Hendrik Lehmbruch
 Copyright=2015-2016, Hendrik Lehmbruch
@@ -10,6 +10,6 @@ Version=0.1
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Theme-Id=deepspace
+Theme-Id=openspace
 Theme-API=2.0
-Website=
+Website=https://github.com/hhl/hhl/tree/master/sddm-themes-hhl

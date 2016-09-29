@@ -94,7 +94,7 @@ Rectangle {
 
     /* background Main block */    
     /************************************************** 
-     * deepspace is made for dark backgrounds
+     * openspace is made for dark backgrounds
      * if you have light ones, choose a background color
      * at the moment it is "transparent"
      * also take a look to the topBar above
@@ -417,7 +417,13 @@ Rectangle {
         interval: 100
         running: true
         repeat: true
-
+        
+        /***************************************************************************
+        * The DateTime format is displayed like the system setup, 
+        * to change the DateTime format e.g. for the US,
+        * change it to (new Date(),"MM-dd-yyyy, hh:mm ap")
+        * or you can try LongFormat,ShortFormat or NarrowFormat, it is your choise.
+        ****************************************************************************/
         onTriggered: {
             dateTime.text = Qt.formatDateTime(new Date(), Locale.LongFormat)
         }

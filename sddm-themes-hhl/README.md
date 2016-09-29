@@ -11,7 +11,8 @@ __To use it, you do it on your own risk!__
 
 #### Now some Words to the themes:
 
-- deepspace is originally made for [siduction](https://siduction.org "siduction homepage")
+- openspace is originally made for [siduction](https://siduction.org "siduction homepage") with the name deepspace.  
+  I renamed it to "openspace" to avoid name confusions.
 
  But for technical reasons, we had to change some things there, only the repository is named to deepspace, because of historical reasons.
  [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github").
@@ -19,15 +20,15 @@ __To use it, you do it on your own risk!__
  - _The themes for siduction have other release names!_
 
 - mammoth has just another background and i play more with the technik,  
-  the better choise is to use deepspace.
-- Work with deepspace:
+  the better choise is to use openspace.
+- ##### Work with openspace:
  - You can change the background by your own. Take a look to theme.conf!
  - If you choose to use a light background search for
  
  ```qml
    /* background Main block */    
     /************************************************** 
-     * deepspace is made for dark backgrounds
+     * openspace is made for dark backgrounds
      * if you have light ones, choose a background color
      * at the moment it is "transparent"
      * also take a look to the topBar above
@@ -43,9 +44,9 @@ __To use it, you do it on your own risk!__
     }
     /* end background Main block */
 ```
- - remember, the mainBlock is centered! (theme deepspace) 
+ - be aware, the mainBlock is centered! (theme openspace) 
     - in mammoth the block is a bit deeper because of the pictures
-    - remember mammoth is my playground, it is hard to modify, because of my spagetti-code there.  
+    - remember, mammoth is my playground, it is hard to modify, because of my spagetti-code there.  
       But it works!
  
 
@@ -54,15 +55,18 @@ __To use it, you do it on your own risk!__
  - $user-pictures? no chance!
  
 - all this fancy stuff is disabled!
-- if nothing helps, fetch 
+
+_If nothing helps, fetch 
 [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github")
 and modify it to your needs.  
-Or in debian (sid/unstable) search for "sddm siduction" (`apt search sddm siduction`).  
-I told you, it is nearly the same, no fancy stuff and so on.
+Or if you use [siduction](https://siduction.org "siduction homepage"), search for "sddm siduction" (`apt search sddm siduction`).  
+For debian sid/unstable you are able to find them in the [siduction repositories](http://packages.siduction.org/ "packages.siduction.org/"), [amd64](http://packages.siduction.org/?Repositories:extra_amd64 "amd64") and [i386](http://packages.siduction.org/?Repositories:extra_i386 "i386").  
+I told you, it is nearly the same, no fancy stuff and so on._
 
 ---
 
 #### What is needed:
+
 - [sddm](https://github.com/sddm/sddm "sddm")
 - QtQuick 2.0 (normaly it should be automagicly installed together with sddm)
 - QtGraphicalEffects 1.0 (qml-module-qtgraphicaleffects)
@@ -73,7 +77,7 @@ I told you, it is nearly the same, no fancy stuff and so on.
 
  Just copy the theme folder to /usr/share/sddm/themes/
  
- Don't forget to edit in etc/sddm.conf
+ Don't forget to edit in /etc/sddm.conf
 
  ```
  [Theme]
@@ -86,15 +90,14 @@ In kf5/plasma you can use the sddm-kcm module ( kde-config-sddm) to choose via s
  
 #### How it looks like?
 
-![alt deepspace-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg "sddm-theme-deepspace preview")
+##### openspace
+![alt openspace-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg "sddm-theme-openspace preview")
 
-_deepspace_
-
-
-![sample mammoth-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/mammoth/images/preview.jpg "sddm-theme-mammoth preview")
-
-_mammoth_
+##### mammoth
+![alt mammoth-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/mammoth/images/preview.jpg "sddm-theme-mammoth preview")
 
 ---
+
+##### Last but not least
  
 _I try to keep them up to date, but i can't give any guarantee that it will be just in time!_

@@ -20,11 +20,11 @@ Copyright: 2015-2016 Hendrik Lehmbruch <hendrikl@siduction.org>
            2016-2016 siduction Art Team https://siduction.org
 License: EXPAT
 
-Files: theme/deepspace/images/*
+Files: theme/openspace/images/*
 Copyright: 2015-2016 Hendrik Lehmbruch <hendrikl@siduction.org>
 License: WTFPL2
 
-Files: theme/deepspace/images/background.jpg siduction*.png
+Files: theme/openspace/images/background.jpg siduction*.png
 Copyright: 2015-2016 Hendrik Lehmbruch <hendrikl@siduction.org>
            2016-2016 siduction Art Team https://siduction.org
 License: EXPAT

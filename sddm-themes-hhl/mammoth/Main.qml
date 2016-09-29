@@ -435,6 +435,12 @@ Rectangle {
         running: true
         repeat: true
         
+        /***************************************************************************
+        * The DateTime format is displayed like the system setup, 
+        * to change the DateTime format e.g. for the US,
+        * change it to (new Date(),"MM-dd-yyyy, hh:mm ap")
+        * or you can try LongFormat,ShortFormat or NarrowFormat, it is your choise.
+        ****************************************************************************/
         onTriggered: {
             dateTime.text = Qt.formatDateTime(new Date(), Locale.LongFormat)
         }
