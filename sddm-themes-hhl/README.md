@@ -19,8 +19,14 @@ Now some Words to the themes:
 
  The themes for siduction have other release names!
 
-- mammoth has just another background and i play more with the technik, so it is better to use deepspace, you can change the background by your own!
+- mammoth has just another background and i play more with the technik, so it is better to use deepspace, 
+  you can change the background by your own!
 - Take a look to the sources!
+
+- no $user pics are displayed and no $user-name is automaticly displayed in the userName field
+  if you want it? read the sources!
+  $user-pictures? no chance!
+  all this fancy stuff is disabled!
 
 ---
 
@@ -31,6 +37,12 @@ What is needed:
 
 How to install?
 
-Just copy the theme folder to /usr/share/sddm/themes/
+ Just copy the theme folder to /usr/share/sddm/themes/
+ 
+How it look like?
+
+![sample screenshot](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/deepspace/images/preview.jpg)
+
+
  
 _I try to keep them up to date, but i cant give any guarantee that it will be just in time!_
