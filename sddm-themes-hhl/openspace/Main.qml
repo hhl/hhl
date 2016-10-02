@@ -104,7 +104,7 @@ Rectangle {
         anchors.centerIn: parent
         width: 534
         height: 150
-        color:  "black" //"#053343"
+        color:  "transparent" //"black" //"#053343"
         opacity: 0.25
         radius: 9
     }
