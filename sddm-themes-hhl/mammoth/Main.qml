@@ -343,7 +343,7 @@ Rectangle {
                                     ImageButton {
                                         id: session_button
                                         height: 32
-                                        source: "images/siductionlogin-white.png"
+                                        source: "images/session_button.png"
                                         onClicked: if (menu_session.state === "visible") menu_session.state = ""; else 
                                         menu_session.state = "visible"
                                         

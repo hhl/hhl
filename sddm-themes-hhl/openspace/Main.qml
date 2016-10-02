@@ -104,7 +104,7 @@ Rectangle {
         anchors.centerIn: parent
         width: 534
         height: 150
-        color:  "transparent" //"black" //"#053343"
+        color:  "black" //"#053343"
         opacity: 0.25
         radius: 9
     }
@@ -282,7 +282,7 @@ Rectangle {
                     ImageButton {
                         id: session_button
                         height: 32
-                        source: "images/siductionlogin-white.png"
+                        source: "images/session_button.png"
                         onClicked: if (menu_session.state === "visible") menu_session.state = ""; else 
                         menu_session.state = "visible"
 
