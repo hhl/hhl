@@ -10,18 +10,14 @@ Copyright: 2015-2016 Hendrik Lehmbruch <hendrikl@siduction.org>
            2013      Reza Fatahilah Shah <rshah0385@kireihana.com>
            2013      Abdurrahman AVCI <abdurrahmanavci@gmail.com>
 License: EXPAT
-           
-Files: theme/mammoth/images/*
-Copyright: 2015-2016 Hendrik Lehmbruch <hendrikl@siduction.org>
-License: WTFPL2
 
-Files: theme/openspace/images/*
+Files: openspace/images/* mammoth/images/* poetry/images/* pure-poetry/images/*
 Copyright: 2015-2016 Hendrik Lehmbruch <hendrikl@siduction.org>
 License: WTFPL2
 
 Files: theme/openspace/images/background.jpg 
 Copyright: 2015-2016 Hendrik Lehmbruch <hendrikl@siduction.org>
-           2016-2016 siduction Art Team https://siduction.org
+           2015-2016 siduction Art Team https://siduction.org
 License: EXPAT
 
 
