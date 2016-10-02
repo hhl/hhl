@@ -57,9 +57,9 @@ __To use it, you do it on your own risk!__
 - all this fancy stuff is disabled!
 
 - __poetry__ is like openspace but another background
-- __pure-poetry__ is a greeter with one function, login  
-all other buttons are disabled.  
-This theme could be used for example to manage a kiosk desktop or an office desktop
+- __pure-poetry__ is a greeter with one function, login
+    - all other buttons are disabled.  
+    - This theme could be used for example to manage a kiosk desktop or an office desktop
 
 _If nothing helps, fetch 
 [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github")
