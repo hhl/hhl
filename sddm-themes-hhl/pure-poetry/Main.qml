@@ -273,11 +273,11 @@ Rectangle {
                     }
                 }
                 /* end input fields */
-                
+
                 Row {
                     id: spaceRow
                     spacing:8
-                    
+
                     Rectangle {
                         id: spaceRectangle
                         height:3
@@ -291,24 +291,26 @@ Rectangle {
     }
     /* end Main block */
     
-    /* tooltip button */
+    /* tooltip login_button */
     ToolTip {
-        id: tooltip2
+        id: tooltip
         target: login_button
         text: textConstants.login
     }
-    /* end tooltip */
+    /* end tooltip login_button */
     
+    /* background login_button */
     Rectangle {
         id:bgLoginButton
         anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: 246.5
+        anchors.topMargin: 247
         height:42
         width:42
         radius:21
-        color: "white"
+        color: "transparent" //"red" //"white"
     }
+    /* end background login_button */
     
     /* login button */
    ImageButton {
@@ -317,6 +319,7 @@ Rectangle {
         anchors.horizontalCenter: parent.horizontalCenter
         height: 36
         anchors.topMargin: 250
+        opacity: 1
         source: "images/login_normal.png"                                                    
         
         onClicked: sddm.login(user_entry.text, pw_entry.text, menu_session.index)
@@ -325,7 +328,7 @@ Rectangle {
     }
     /* end login button */
 
-        /* welcome to hostname topBar left */
+    /* welcome to hostname topBar left */
     Text {
         id:hostName
         anchors.top: parent.top
