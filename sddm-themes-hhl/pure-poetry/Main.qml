@@ -286,131 +286,46 @@ Rectangle {
                         color: "transparent" //"red"
                     }
                 }
-
-                /* button Row */
-                Row {                    
-                    id: buttonRow                    
-                    spacing: 8
-
-//                     ImageButton {
-//                         id: session_button
-//                         height: 32
-//                         source: "images/session_button.png"
-//                         onClicked: if (menu_session.state === "visible") menu_session.state = ""; else 
-//                         menu_session.state = "visible"
-// 
-//                         KeyNavigation.backtab: login_button; KeyNavigation.tab: system_button
-//                     }
-// 
-//                     ImageButton {
-//                         id: system_button
-//                         height: 32
-//                         source: "images/system_shutdown.png"
-//                         onClicked: sddm.powerOff()
-// 
-//                         KeyNavigation.backtab: session_button; KeyNavigation.tab: reboot_button
-//                     }
-// 
-//                     ImageButton {
-//                         id: reboot_button
-//                         height: 32
-//                         source: "images/system_reboot.png"
-//                         onClicked: sddm.reboot()
-// 
-//                         KeyNavigation.backtab: system_button; KeyNavigation.tab: suspend_button
-//                     }
-// 
-//                     ImageButton {
-//                         id: suspend_button
-//                         height: 32
-//                         source: "images/system_suspend.png"
-//                         visible: sddm.canSuspend
-//                         onClicked: sddm.suspend()
-// 
-//                         KeyNavigation.backtab: reboot_button; KeyNavigation.tab: hibernate_button
-//                     }
-// 
-//                     ImageButton {
-//                         id: hibernate_button
-//                         height: 32
-//                         source: "images/system_hibernate.png"
-//                         visible: sddm.canHibernate
-//                         onClicked: sddm.hibernate()
-// 
-//                         KeyNavigation.backtab: suspend_button; KeyNavigation.tab: user_entry
-//                     }
-
-                    ImageButton {
-                        id: login_button
-                        height: 32
-                        source: "images/login_normal.png"                                                    
-
-                        onClicked: sddm.login(user_entry.text, pw_entry.text, menu_session.index)
-
-                        KeyNavigation.backtab: pw_entry; KeyNavigation.tab: user_entry /* session_button */
-                    }
-                }
-                /* end buttonRow */
-
-                /* ************************************************
-                 * drop down menu session button 
-                 * comment it out, if you don't wont it 
-                 * don't forget the session_button above 
-                 * also the KeyNavigation of the next button is a
-                 * thought worth than, ... okay?
-                 * ************************************************/
-//                 SessionMenu {                    
-//                     id: menu_session
-//                     width: 200; height: 0
-//                     model: sessionModel
-//                     index: sessionModel.lastIndex                    
-//                 }
             }
         }
     }
     /* end Main block */
-
-    /* tooltips buttonRow */
-//     ToolTip {
-//         id: tooltip3
-//         target: session_button
-//         text: textConstants.session
-//     }
-// 
-//     ToolTip {
-//         id: tooltip4
-//         target: system_button
-//         text: textConstants.shutdown
-//     }
-// 
-//     ToolTip {
-//         id: tooltip5
-//         target: reboot_button
-//         text: textConstants.reboot
-//     }
-// 
-//     /** there is no translation in sddm for it **/
-//     ToolTip {
-//         id: tooltip6
-//         target: suspend_button
-//         text: "Suspend" // textConstants.suspend
-//     }
-// 
-//     /** there is no translation in sddm for it **/        
-//     ToolTip {
-//         id: tooltip7
-//         target: hibernate_button
-//         text: "Hibernate" //textConstants.hibernate
-//     }
-
+    
+    /* tooltip button */
     ToolTip {
         id: tooltip2
         target: login_button
         text: textConstants.login
     }
-    /* end tooltips */
+    /* end tooltip */
+    
+    Rectangle {
+        id:bgLoginButton
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.topMargin: 246.5
+        height:42
+        width:42
+        radius:21
+        color: "white"
+    }
+    
+    /* login button */
+   ImageButton {
+        id: login_button
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+        height: 36
+        anchors.topMargin: 250
+        source: "images/login_normal.png"                                                    
+        
+        onClicked: sddm.login(user_entry.text, pw_entry.text, menu_session.index)
+        
+        KeyNavigation.backtab: pw_entry; KeyNavigation.tab: user_entry /* session_button */
+    }
+    /* end login button */
 
-    /* welcome to hostname topBar left */
+        /* welcome to hostname topBar left */
     Text {
         id:hostName
         anchors.top: parent.top
@@ -423,7 +338,7 @@ Rectangle {
         font.pixelSize: 12
     }
     /* end hostname */
-
+    
     /* time and date topBar right */
     Timer {
         id: time
