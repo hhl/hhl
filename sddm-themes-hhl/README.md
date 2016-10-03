@@ -52,7 +52,7 @@ __To use it, you do it on your own risk!__
       
  - no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field  
     - You want last succesfull logged in $user displayed? read the sources!
-    - $user-pictures? no chance!
+    - $user-pictures or avatars? no chance!
  
 - all this fancy stuff is disabled!
 
