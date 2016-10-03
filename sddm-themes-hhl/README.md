@@ -14,7 +14,7 @@ __To use it, you do it on your own risk!__
 - __openspace__ is originally made for [siduction](https://siduction.org "siduction homepage") with the name __deepspace__.  
   I renamed it to "openspace" to avoid name confusions.
 
- But for technical reasons, we had to change some things there, only the repository is named to deepspace, because of historical reasons.
+ For technical reasons, we had to change some things there, only the repository is named to deepspace, because of historical reasons.
  [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github").
 
  - _The themes for siduction have other release names!_
