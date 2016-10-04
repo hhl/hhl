@@ -11,10 +11,10 @@ __To use it, you do it on your own risk!__
 
 #### Now some Words to the themes:
 
-- __openspace__ is originally made for [siduction](https://siduction.org "siduction homepage") with the name deepspace.  
+- __openspace__ is originally made for [siduction](https://siduction.org "siduction homepage") with the name __deepspace__.  
   I renamed it to "openspace" to avoid name confusions.
-
- But for technical reasons, we had to change some things there, only the repository is named to deepspace, because of historical reasons.
+  - openspace has the same background like sddm-theme-patience for siduction without the branding!
+  - For technical reasons, we had to change some things there (sddm-themes for siduction), only the repository is named to __deepspace__, because of historical reasons.
  [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github").
 
  - _The themes for siduction have other release names!_
@@ -52,7 +52,7 @@ __To use it, you do it on your own risk!__
       
  - no $user pics are displayed and no $user-name is automaticly displayed in the user_entry field  
     - You want last succesfull logged in $user displayed? read the sources!
-    - $user-pictures? no chance!
+    - $user-pictures or avatars? no chance!
  
 - all this fancy stuff is disabled!
 
