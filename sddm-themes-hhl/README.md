@@ -57,9 +57,6 @@ __To use it, you do it on your own risk!__
 - all this fancy stuff is disabled!
 
 - __poetry__ is like openspace but another background
-- __pure-poetry__ is a greeter with one function, login
-    - all other buttons are disabled.  
-    - This theme could be used for example to manage a kiosk desktop or an office desktop
 
 _If nothing helps, fetch 
 [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github")
@@ -115,9 +112,6 @@ In kf5/plasma you can use the sddm-kcm module ( kde-config-sddm) to choose via s
 
 ##### poetry
 ![alt poetry-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/poetry/images/preview.jpg "sddm-theme-poetry preview")
-
-##### pure-poetry
-![alt pure-poetry-preview](https://github.com/hhl/hhl/blob/master/sddm-themes-hhl/pure-poetry/images/preview.jpg "sddm-theme-pure-poetry preview")
 
 ---
 
