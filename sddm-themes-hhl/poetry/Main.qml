@@ -398,47 +398,56 @@ Rectangle {
     }
     /* end tooltips */
 
-    /* welcome to hostname topBar left */
-    Text {
-        id:hostName
+    Row {
+        id: infoRow
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.leftMargin: 20
         anchors.topMargin: 10
-        color:"white"
-
-        text:textConstants.welcomeText.arg (sddm.hostName)
-        font.pixelSize: 12
-    }
-    /* end hostname */
-
-    /* time and date topBar right */
-    Timer {
-        id: time
-        interval: 100
-        running: true
-        repeat: true
         
-        /***************************************************************************
-        * The DateTime format is displayed like the system setup, 
-        * to change the DateTime format e.g. for the US,
-        * change it to (new Date(),"MM-dd-yyyy, hh:mm ap")
-        * or you can try LongFormat,ShortFormat or NarrowFormat, it is your choise.
-        ****************************************************************************/
-        onTriggered: {
-            dateTime.text = Qt.formatDateTime(new Date(), Locale.LongFormat)
+        spacing: 8
+        
+        /* time and date bottom left */
+        Timer {
+            id: time
+            interval: 100
+            running: true
+            repeat: true
+            
+            /***************************************************************************
+             * The DateTime format is displayed like the system setup, 
+             * to change the DateTime format e.g. for the US,
+             * change it to (new Date(),"MM-dd-yyyy, hh:mm ap")
+             * or you can try LongFormat,ShortFormat or NarrowFormat, it is your choise.
+             ****************************************************************************/
+            onTriggered: {
+                dateTime.text = Qt.formatDateTime(new Date(), Locale.LongFormat)
+            }
         }
+        
+        Text { 
+            id:dateTime
+            color: "white"
+            font.pixelSize: 12
+        }
+        /* end time and date */
+        
+        Text {
+            id: dummy
+            color: "white"
+            font.pixelSize: 12
+            text: "@"
+        }
+        
+        /* welcome to hostname topBar left */
+        Text {
+            id:hostName
+            color:"white"
+            
+            text:(sddm.hostName)
+            font.pixelSize: 12
+        }
+        /* end hostname */
     }
-
-    Text { 
-        id:dateTime
-        anchors.top: parent.top
-        anchors.right: parent.right
-        anchors.rightMargin: 20
-        anchors.topMargin: 10
-        color: "white"
-    }
-    /* end time and date */
 
     Component.onCompleted: {
         if (user_entry.text === "")

@@ -92,14 +92,30 @@ showChanged(bool flag); anchors.fill:parent; hoverEnabled: true; acceptedButtons
         }
     }
 
-    NumberAnimation {
+    SequentialAnimation {
         id: fadein
-        target: toolTipContainer
-        property: "opacity"
-        easing.type: Easing.InOutQuad
-        duration: 1000
-        from: 0
-        to: 1
-    }
+        
+        NumberAnimation {
+            target: toolTipContainer
+            property: "opacity"
+            easing.type: Easing.InOutQuad
+            duration: 750
+            from: 0
+            to: 1
+        }       
+
+        PauseAnimation {
+            duration: 500           
+        }
+        
+        NumberAnimation {
+            target: toolTipContainer
+            property: "opacity"
+            easing.type: Easing.InOutQuad
+            duration: 750
+            from: 1
+            to: 0
+        }
+     }
     onVisibleChanged: if(visible)fadein.start();
 }
