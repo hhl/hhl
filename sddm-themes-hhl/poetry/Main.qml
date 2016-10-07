@@ -305,28 +305,28 @@ Rectangle {
                         source: "images/system_reboot.png"
                         onClicked: sddm.reboot()
 
-                        KeyNavigation.backtab: system_button; KeyNavigation.tab: suspend_button
+                        KeyNavigation.backtab: system_button; KeyNavigation.tab: user_entry //suspend_button
                     }
 
-                    ImageButton {
-                        id: suspend_button
-                        height: 32
-                        source: "images/system_suspend.png"
-                        visible: sddm.canSuspend
-                        onClicked: sddm.suspend()
-
-                        KeyNavigation.backtab: reboot_button; KeyNavigation.tab: hibernate_button
-                    }
-
-                    ImageButton {
-                        id: hibernate_button
-                        height: 32
-                        source: "images/system_hibernate.png"
-                        visible: sddm.canHibernate
-                        onClicked: sddm.hibernate()
-
-                        KeyNavigation.backtab: suspend_button; KeyNavigation.tab: user_entry
-                    }
+//                     ImageButton {
+//                         id: suspend_button
+//                         height: 32
+//                         source: "images/system_suspend.png"
+//                         visible: sddm.canSuspend
+//                         onClicked: sddm.suspend()
+// 
+//                         KeyNavigation.backtab: reboot_button; KeyNavigation.tab: hibernate_button
+//                     }
+// 
+//                     ImageButton {
+//                         id: hibernate_button
+//                         height: 32
+//                         source: "images/system_hibernate.png"
+//                         visible: sddm.canHibernate
+//                         onClicked: sddm.hibernate()
+// 
+//                         KeyNavigation.backtab: suspend_button; KeyNavigation.tab: user_entry
+//                     }
 
                     ImageButton {
                         id: login_button
@@ -416,11 +416,15 @@ Rectangle {
             /***************************************************************************
              * The DateTime format is displayed like the system setup, 
              * to change the DateTime format e.g. for the US,
-             * change it to (new Date(),"MM-dd-yyyy, hh:mm ap")
+             * change it to:
+             * new Date(),"MM-dd-yyyy, hh:mm ap"
              * or you can try LongFormat,ShortFormat or NarrowFormat, it is your choise.
+             * Qt.formatDateTime(new Date(), Locale.LongFormat)
+             * If you want a really lon formated DateTime try this:
+             * new Date().toLocaleString(Qt.locale()) (curently used)
              ****************************************************************************/
             onTriggered: {
-                dateTime.text = Qt.formatDateTime(new Date(), Locale.LongFormat)
+                dateTime.text = new Date().toLocaleString(Qt.locale())
             }
         }
         
