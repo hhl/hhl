@@ -308,12 +308,13 @@ Rectangle {
                         KeyNavigation.backtab: system_button; KeyNavigation.tab: user_entry //suspend_button
                     }
 
-                     /************************************************************************** 
-                     * i deactivated hibernate and suspend, because i thing it is not needed
-                     * at the loginscreen!
+                     /*****************************************************
+                     * i deactivated hibernate and suspend, 
+                     * because i think it is not needed at the loginscreen!
                      * If you need or want it, remove the comments
-                     * dont forget the toolTips and the KeyNavigation.tab
-                     * *************************************************************************/
+                     * dont forget the toolTips and the 
+                     * KeyNavigation.tab -> see reboot_button
+                     * ****************************************************/
 //                     ImageButton {
 //                         id: suspend_button
 //                         height: 32
