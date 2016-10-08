@@ -56,7 +56,9 @@ __To use it, you do it on your own risk!__
  
 - all this fancy stuff is disabled!
 
-- __poetry__ is like openspace but another background
+- __poetry__ is like openspace but, ... another background, no suspend and hibernate button  
+(you can enable them, if you remove the comments, take a look to the source and read.  
+The fotmat for date and time is a bit different (read the source, you will see)!
 
 _If nothing helps, fetch 
 [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github")
