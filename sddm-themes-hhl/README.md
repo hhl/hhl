@@ -54,11 +54,16 @@ __To use it, you do it on your own risk!__
     - You want last succesfull logged in $user displayed? read the sources!
     - $user-pictures or avatars? no chance!
  
-- all this fancy stuff is disabled!
+- all that fancy stuff is disabled!
 
-- __poetry__ is like openspace but, ... another background, no suspend and hibernate button  
-(you can enable them, if you remove the comments, take a look to the source and read.  
-The fotmat for date and time is a bit different (read the source, you will see)!
+- __poetry__ is like openspace but, ... 
+  - another background
+  - no suspend and hibernate button
+    - you can enable them verry easy, if you remove the comments  
+     (take a look to the source (Main.qml) and read!)
+  - date, time and hostname are displayed now top center
+  - the fotmat for displaying the date and time is a bit different 
+    - read the source, you will see and find a way to change it, if you want
 
 _If nothing helps, fetch 
 [sddm-theme-deepspace](https://github.com/siduction/sddm-theme-deepspace "the side on github")
