@@ -84,7 +84,7 @@ I told you, it is nearly the same, no fancy stuff and so on._
 
 #### How to test the greeter?
 
-- You mdified the greeter and wanna test it?
+- You modified the greeter and wanna test it?
 - You only want to see how it looks like?
 
 No problem,
