@@ -8,12 +8,12 @@
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="siduction-irc-ng.svg"
    sodipodi:version="0.32"
-   width="96"
+   width="86"
    version="1.1"
    inkscape:export-filename="/kammer/bastelecke/github/hhl-git/hhl/icons/png/siduction-irc-ng.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
-   viewBox="0 0 95.999998 96"
+   viewBox="0 0 85.999998 96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -270,13 +270,13 @@
          id="g901"
          transform="matrix(1.0419165,0,0,1.0419165,4.7028155,0.89498476)">
         <rect
-           style="fill:#ffffff;fill-opacity:1;stroke:#ff7000;stroke-width:0.676863;stroke-opacity:1"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ff7000;stroke-width:0.639774;stroke-opacity:1"
            id="rect4193"
-           width="83.726784"
-           height="83.664124"
-           x="-55.000294"
-           y="-20.433189"
-           ry="4.7540722" />
+           width="74.769447"
+           height="83.70121"
+           x="-55.018837"
+           y="-20.451735"
+           ry="4.7561798" />
         <g
            id="g897"
            transform="matrix(1.0233838,0,0,1.0233838,3.1141894,-0.2438635)">
@@ -353,15 +353,15 @@
         </g>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.418px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#004455;fill-opacity:1;stroke:none;stroke-width:0.535447"
-           x="-6.5142403"
-           y="47.431614"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.241px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#004455;fill-opacity:1;stroke:none;stroke-width:0.431023"
+           x="-7.6538405"
+           y="45.624756"
            id="text4739"><tspan
              sodipodi:role="line"
              id="tspan4737"
-             x="-6.5142403"
-             y="47.431614"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#004455;stroke-width:0.535447">irc</tspan></text>
+             x="-7.6538405"
+             y="45.624756"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#004455;stroke-width:0.431023">irc</tspan></text>
       </g>
     </g>
   </g>
