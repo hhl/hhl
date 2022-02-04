@@ -2,18 +2,18 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   height="96.376839"
+   height="96"
    id="svg5816"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="siduction-irc-ng.svg"
    sodipodi:version="0.32"
-   width="86.353416"
+   width="96"
    version="1.1"
-   inkscape:export-filename="/kammer/bastelecke/github/hhl-git/icons/png/siduction-irc-ng.png"
-   inkscape:export-xdpi="261.82001"
-   inkscape:export-ydpi="261.82001"
-   viewBox="0 0 86.353415 96.376839"
+   inkscape:export-filename="/kammer/bastelecke/github/hhl-git/hhl/icons/png/siduction-irc-ng.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   viewBox="0 0 95.999998 96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -66,10 +66,10 @@
      id="defs3">
     <inkscape:perspective
        id="perspective42"
-       inkscape:persp3d-origin="24 : 90.376839 : 1"
-       inkscape:vp_x="0 : 98.376839 : 1"
+       inkscape:persp3d-origin="24 : 90 : 1"
+       inkscape:vp_x="0 : 98 : 1"
        inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="47.999999 : 98.376839 : 1"
+       inkscape:vp_z="47.999999 : 98 : 1"
        sodipodi:type="inkscape:persp3d" />
     <linearGradient
        id="linearGradient5048">
@@ -270,16 +270,16 @@
          id="g901"
          transform="matrix(1.0419165,0,0,1.0419165,4.7028155,0.89498476)">
         <rect
-           style="fill:#ffffff;fill-opacity:1;stroke:#ff7000;stroke-width:0.640454;stroke-opacity:1"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ff7000;stroke-width:0.676863;stroke-opacity:1"
            id="rect4193"
-           width="74.928864"
-           height="83.700531"
-           x="-55.018497"
-           y="-20.451395"
-           ry="4.7561412" />
+           width="83.726784"
+           height="83.664124"
+           x="-55.000294"
+           y="-20.433189"
+           ry="4.7540722" />
         <g
            id="g897"
-           transform="translate(0,-1.7502334)">
+           transform="matrix(1.0233838,0,0,1.0233838,3.1141894,-0.2438635)">
           <g
              transform="matrix(0.046786,0,0,0.046786,-50.705909,-20.294203)"
              style="display:inline;fill:#216778"
@@ -354,13 +354,13 @@
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:21.418px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#004455;fill-opacity:1;stroke:none;stroke-width:0.535447"
-           x="-11.466055"
-           y="44.909855"
+           x="-6.5142403"
+           y="47.431614"
            id="text4739"><tspan
              sodipodi:role="line"
              id="tspan4737"
-             x="-11.466055"
-             y="44.909855"
+             x="-6.5142403"
+             y="47.431614"
              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#004455;stroke-width:0.535447">irc</tspan></text>
       </g>
     </g>
