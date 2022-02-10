@@ -10,7 +10,7 @@ Or test it with
 sddm-greeter --test-mode --theme /usr/share/sddm/themes/2022-01-kde/
 ```
 
-I had to choose absolut path to the icon-theme, do not know why it doesn't work with relativ path, so it has to stay in /usr/share/sddm/themes, sorry for that.
+I had to choose an absolut path to the icon-theme, do not know why it doesn't work with relativ path, so it has to stay in /usr/share/sddm/themes, sorry for that.
 
 I will investigate later, first it has to work.
 
