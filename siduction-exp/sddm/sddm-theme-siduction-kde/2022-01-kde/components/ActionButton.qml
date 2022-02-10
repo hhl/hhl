@@ -36,7 +36,7 @@ Item {
 
     activeFocusOnTab: true
 
-    property int iconSize: units.gridUnit * 3
+    property int iconSize: units.gridUnit * 2
 
     implicitWidth: Math.max(iconSize + units.largeSpacing * 2, label.contentWidth)
     implicitHeight: iconSize + units.smallSpacing + label.implicitHeight
@@ -54,7 +54,7 @@ Item {
         anchors.centerIn: icon
         width: iconSize + units.smallSpacing
         height: width
-        radius: width / 2
+        radius: width / 1.3
         color: softwareRendering ?  PlasmaCore.ColorScope.backgroundColor : PlasmaCore.ColorScope.textColor
         opacity: activeFocus || containsMouse ? (softwareRendering ? 0.8 : 0.15) : (softwareRendering ? 0.6 : 0)
         Behavior on opacity {
@@ -69,7 +69,7 @@ Item {
         anchors.centerIn: iconCircle
         width: iconCircle.width
         height: width
-        radius: width / 2
+        radius: width / 1.3
         scale: mouseArea.containsPress ? 1 : 0
         color: PlasmaCore.ColorScope.textColor
         opacity: 0.15
