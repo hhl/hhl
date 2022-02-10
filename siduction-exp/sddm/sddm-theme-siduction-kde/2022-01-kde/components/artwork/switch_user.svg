@@ -81,7 +81,7 @@
        style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        sodipodi:type="star"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2.12764;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.68499;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4447"
        sodipodi:sides="3"
        sodipodi:cx="-3.8754072"
@@ -93,14 +93,14 @@
        inkscape:flatsided="true"
        inkscape:rounded="0"
        inkscape:randomized="0"
-       inkscape:transform-center-y="0.70071598"
-       transform="matrix(0,0.47000353,-0.47000353,0,-115.59253,287.51877)"
-       inkscape:transform-center-x="1.7265337e-06"
+       inkscape:transform-center-y="0.61549335"
+       transform="matrix(0,0.41284467,-0.55253457,0,-137.52983,287.3057)"
+       inkscape:transform-center-x="7.3515577e-06"
        d="m 1.2891155,-262.07515 -10.3290454,0 5.1645227,-8.94521 z" />
     <path
        sodipodi:type="star"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2.12764;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4447-3"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.68499;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4447-6"
        sodipodi:sides="3"
        sodipodi:cx="-3.8754072"
        sodipodi:cy="-265.05688"
@@ -111,8 +111,9 @@
        inkscape:flatsided="true"
        inkscape:rounded="0"
        inkscape:randomized="0"
-       inkscape:transform-center-y="0.70071598"
-       transform="matrix(0,0.47000353,0.47000353,0,132.54581,293.12139)"
+       inkscape:transform-center-y="0.61549335"
+       transform="matrix(0,0.41284467,0.55253457,0,154.36847,293.10506)"
+       inkscape:transform-center-x="-2.4055489e-06"
        d="m 1.2891155,-262.07515 -10.3290454,0 5.1645227,-8.94521 z" />
   </g>
 </svg>

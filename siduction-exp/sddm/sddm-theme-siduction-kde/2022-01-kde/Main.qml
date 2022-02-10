@@ -419,9 +419,9 @@ PlasmaCore.ColorScope {
         }
 
         RowLayout {
-            id: header
+            id: footer
             anchors {
-                top: parent.top
+                bottom: parent.bottom
                 left: parent.left
                 right: parent.right
                 margins: units.smallSpacing
