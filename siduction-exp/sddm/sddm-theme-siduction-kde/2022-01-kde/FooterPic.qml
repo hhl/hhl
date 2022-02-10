@@ -25,7 +25,7 @@ import QtQuick 2.2
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottomMargin: 30
         width: parent.width
-        source: "footer.svg"
+        source: "components/artwork/footer.svg"
         fillMode: Image.PreserveAspectFit
         smooth: true;
     }
