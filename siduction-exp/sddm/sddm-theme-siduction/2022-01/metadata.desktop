@@ -1,6 +1,6 @@
 [SddmGreeterTheme]
-Name=wintersky
-Description=wintersky sddm theme
+Name=2022-01
+Description=2022-01 sddm theme
 Type=sddm-greeter
 Author=Hendrik Lehmbruch
 Copyright=2021, Hendrik Lehmbruch
@@ -10,6 +10,6 @@ Version=0.1
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Theme-Id=wintersky
+Theme-Id=2022-01
 Theme-API=2.0
 Website=https://github.com/siduction/sddm-theme-siduction
