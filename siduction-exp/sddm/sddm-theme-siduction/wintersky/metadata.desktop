@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=wintersky
+Description=wintersky sddm theme
+Type=sddm-greeter
+Author=Hendrik Lehmbruch
+Copyright=2021, Hendrik Lehmbruch
+License=EXPAT
+Screenshot=images/preview.png
+Version=0.1
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=wintersky
+Theme-API=2.0
+Website=https://github.com/siduction/sddm-theme-siduction

@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=2022-01
+Description=2022-01 theme for KDE Plasma
+Author=Hnedrik Lehmbruch
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=0.1
+Website=https://siduction.org
+Screenshot=Preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=hendrikl@siduction.org
+Theme-Id=2022-01
+Theme-API=2.0
