@@ -1,0 +1,27 @@
+---
+componentName:   siduction
+slideshowAPI: 1
+windowPlacement: center
+windowSize: 1000px,700px
+
+strings:
+    productName:         siduction
+    shortProductName:    siduction
+    version:             2023.1 (30 Years of Debian)
+    shortVersion:        2023.1
+    versionedName:       siduction 2023.1 (30 Years of Debian) "Standing on the Shoulders of Giants" Release
+    shortVersionedName:  siduction 2023.1
+    bootloaderEntryName: siduction
+
+images:
+    productLogo:         "siduction-logo.png"
+    productIcon:         "siduction-logo.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+
+style:
+   SidebarBackground:        "#2A2E32"
+   SidebarText:              "#7A7C7D"
+   SidebarBackgroundCurrent: "#2E516A"
+   SidebarTextCurrent:       "#FCFCFC"
