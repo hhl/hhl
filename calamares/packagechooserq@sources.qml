@@ -132,7 +132,7 @@ Item {
                     onCheckedChanged: {
                         if (checked) {
                             // Call function to run the script to enable non-free repositories
-                            addNonFreeCheckbox()
+                            addNonFree()
                             // config.packageChoice = "non-free"
                         } else {
                             // Optionally you can disable or handle unchecked state
@@ -142,7 +142,7 @@ Item {
                 }
 
                 // Function to run the script when the checkbox is checked
-                function addNonFreeCheckbox() {
+                function addNonFree() {
                     var process = Qt.createQmlObject('import QtQuick 2.0; QtProcess {}', parent);
                     // This script enables non-free packages in APT
                     process.execute("/usr/sbin/apt-non-free");
