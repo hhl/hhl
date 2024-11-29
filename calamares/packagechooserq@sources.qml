@@ -98,7 +98,7 @@ Item {
                 }
 
                 CheckBox {
-                    id: enableNonFreeCheckbox
+                    id: control
                     text: qsTr("I also want to use <b>non-free</b>.</b> verwenden.")
                     checked: false
                     x: 190
@@ -134,7 +134,7 @@ Item {
                     onCheckedChanged: {
                         if (checked) {
                             // Call function to run the script to enable non-free repositories
-                            enableNonFree()
+                            control()
                             config.packageChoice = "non-free"
                         } else {
                             // Optionally you can disable or handle unchecked state
@@ -144,10 +144,10 @@ Item {
                 }
 
                 // Function to run the script when the checkbox is checked
-                function enableNonFree() {
+                function control() {
                     var process = Qt.createQmlObject('import QtQuick 2.0; QtProcess {}', parent);
                     // This script enables non-free packages in APT
-                    process.execute("../../scripts/apt-non-free");
+                    process.execute("/usr/sbin/apt-non-free");
                 }
 
             }
