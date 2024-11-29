@@ -43,8 +43,6 @@ Item {
             spacing: 5
 
             Rectangle {
-
-                //id: rectangle
                 width: 850
                 height: 180
                 color: "#ffffff"
@@ -98,7 +96,7 @@ Item {
                 }
 
                 CheckBox {
-                    id: control
+                    id: addNonFreeCheckbox
                     text: qsTr("I also want to use <b>non-free</b>.</b> verwenden.")
                     checked: false
                     x: 190
@@ -107,7 +105,7 @@ Item {
                     indicator: Rectangle {
                         implicitWidth: 30
                         implicitHeight: 30
-                        x: control.leftPadding
+                        x: addNonFreeCheckbox.leftPadding
                         y: parent.height / 2 - height / 2
                         radius: 15
                         border.width: 2
@@ -121,21 +119,21 @@ Item {
                             y: 5
                             radius: 10
                             color: "#009900"
-                            visible: control.checked
+                            visible: addNonFreeCheckbox.checked
                         }
                     }
 
                     contentItem: Text {
-                        text: control.text
+                        text: addNonFreeCheckbox.text
                         verticalAlignment: Text.AlignVCenter
-                        leftPadding: control.indicator.width + 15
+                        leftPadding: addNonFreeCheckbox.indicator.width + 15
                     }
 
                     onCheckedChanged: {
                         if (checked) {
                             // Call function to run the script to enable non-free repositories
-                            control()
-                            config.packageChoice = "non-free"
+                            addNonFreeCheckbox()
+                            // config.packageChoice = "non-free"
                         } else {
                             // Optionally you can disable or handle unchecked state
                             console.log("Checkbox unchecked. Non-free software not enabled.")
@@ -144,7 +142,7 @@ Item {
                 }
 
                 // Function to run the script when the checkbox is checked
-                function control() {
+                function addNonFreeCheckbox() {
                     var process = Qt.createQmlObject('import QtQuick 2.0; QtProcess {}', parent);
                     // This script enables non-free packages in APT
                     process.execute("/usr/sbin/apt-non-free");
@@ -154,9 +152,9 @@ Item {
         }
         //Setze config.packageChoice auf den Standardwert
 
-        Component.onCompleted: {
-            config.packageChoice = "debian"
-        }
+        // Component.onCompleted: {
+        //     config.packageChoice = "debian"
+        // }
     }
 }
 
