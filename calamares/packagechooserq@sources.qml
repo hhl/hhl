@@ -88,8 +88,17 @@ Item {
                     wrapMode: Text.WordWrap
                 }
 
+                Image {
+                    id: image
+                    x: 40
+                    y: 30
+                    height: 100
+                    fillMode: Image.PreserveAspectFit
+                    source: "images/non-free.png"
+                }
+
                 CheckBox {
-                    id: control
+                    id: enableNonFreeCheckbox
                     text: qsTr("I also want to use <b>non-free</b>.</b> verwenden.")
                     checked: false
                     x: 190
@@ -122,33 +131,33 @@ Item {
                         leftPadding: control.indicator.width + 15
                     }
 
-                onCheckedChanged {
-                    if (control.checked) {
-                         config.packageChoice = "non-free"
-                         print(config.packageChoice)
+                    onCheckedChanged: {
+                        if (checked) {
+                            // Call function to run the script to enable non-free repositories
+                            enableNonFree()
+                            config.packageChoice = "non-free"
+                        } else {
+                            // Optionally you can disable or handle unchecked state
+                            console.log("Checkbox unchecked. Non-free software not enabled.")
+                        }
                     }
                 }
 
-                Image {
-                    id: image
-                    x: 40
-                    y: 30
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/non-free.png"
+                // Function to run the script when the checkbox is checked
+                function enableNonFree() {
+                    var process = Qt.createQmlObject('import QtQuick 2.0; QtProcess {}', parent);
+                    // This script enables non-free packages in APT
+                    process.execute("../../scripts/apt-non-free");
                 }
 
             }
-
         }
+        //Setze config.packageChoice auf den Standardwert
 
+        Component.onCompleted: {
+            config.packageChoice = "debian"
+        }
     }
-    //Setze config.packageChoice auf den Standardwert
-
-    Component.onCompleted: {
-        config.packageChoice = "debian"
-    }
-
 }
 
 
