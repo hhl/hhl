@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Age and Family Information
+Comment=Minimal age-related setup without real age verification
+Type=CalamaresModule
+X-Calamares-ModuleType=javascript
+X-Calamares-Id=agefamily
+X-Calamares-Weight=500

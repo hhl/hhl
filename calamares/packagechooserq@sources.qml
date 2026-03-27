@@ -133,7 +133,7 @@ Item {
                         if (checked) {
                             // Call function to run the script to enable non-free repositories
                             addNonFree()
-                            config.packageChoice = "non-free"
+                            //config.packageChoice = "non-free"
                         } else {
                             // Optionally you can disable or handle unchecked state
                             console.log("Checkbox unchecked. Non-free software not enabled.")
