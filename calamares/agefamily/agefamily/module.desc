@@ -1,5 +1,5 @@
----
-type:       "view"
-name:       "agefamily"
-interface:  "python"
-script:     "main.py"
+name: agefamily
+type: view
+interface: qml
+qml:
+  source: ../branding/agefamily/content.qml
