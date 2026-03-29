@@ -1,0 +1,5 @@
+---
+type:       "view"
+name:       "agefamily"
+interface:  "python"
+script:     "main.py"
